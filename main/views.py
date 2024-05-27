@@ -18,3 +18,4 @@ class CategoryListEndpoint(generics.ListAPIView):
 class ProductEndpoint(generics.ListCreateAPIView):
     serializer_class = ProductCreateSerializer
     queryset = Product.objects.all()
+    permission_classes = [permissions.AllowAny]
